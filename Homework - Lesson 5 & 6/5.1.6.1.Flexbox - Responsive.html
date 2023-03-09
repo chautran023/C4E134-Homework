@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.1. Flexbox Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .container{
+        display: flex; 
+        flex-direction: column;
+        width: 800px;
+        height: 500px;
+        font-family: sans-serif;
+        border: 2px solid gray;
+    }
+    .ngang{
+        display: flex;
+        flex-direction: row;
+    }
+    .header {
+        width: 130px;
+        height: 40px;
+        background-color: #292957;    
+    }
+    .star{
+        display: flex;
+        padding: 3px;
+        width: 30px;
+        height: 30px;
+    } 
+    .search{
+        display: flex;
+        flex-direction: row;
+    }
+    input[type=text] {
+        width: 600px;
+        border: none;
+        font-size: 10px;
+    }
+    button{
+        height: 38px;
+        width: 36px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+    }
+    .bell{
+        padding-top: 10px;
+        padding-right: 13px;
+        color: gray;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+    }
+    .tree {
+        display: flex;
+        flex-direction: column; 
+        width: 130px;
+        background-color: #292957;    
+    }
+    ul{
+        padding-left: 7px;
+    }
+    li{
+        list-style: none;
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    } 
+    .main {
+        display: flex;
+        position: relative;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+        background-color: rgb(228, 224, 224);
+        font-size: 18px;
+        color: #363673;
+        font-weight: bolder;
+    }
+    .main1{
+        display: flex;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        width: 90%;
+        height: 80%;
+        border-style: dashed;
+        border-width: 3px;
+        border-radius: 10px;
+        color: rgb(172, 167, 167);
+    }
+    .foot{
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+    }
+    .foot1{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: #1b1b3a;    
+        color: aliceblue;
+        width: 130px;
+    }
+    .ava{
+        display: flex;
+        position: absolute;
+        padding: 4px;
+        width: 28px;
+        height: 28px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 8px;
+        left: 50px;
+    }
+    .foot2{
+        flex-grow: 1;
+        background-color: rgb(228, 224, 224);
+    }
+    @media (max-width: 390px){
+        .container{
+            width: 100%;
+            height: 100%;
+
+        }
+        .tree {
+            display: none;
+        }
+        .ngang{
+            flex-direction: column;
+        }
+        .header{
+            width: 100%;
+        }
+        .search{
+            width: 100%;
+        }
+        input[type=text] {
+            width: 100%;
+            border: none;
+            font-size: 10px;
+        }
+        .content{
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .main1{
+            width: 88%;
+        }
+        .foot1{
+            width: 100%;
+        }
+    }  
+</style>
+<body>
+    <div class="container">
+        <div class="ngang">
+            <div class="header">
+                <img class=star src="https://i.pinimg.com/originals/85/db/23/85db232a0e2f4d7ec93db9bcedeb97d8.png">
+            </div>
+            <div class="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search..">
+                <i class="fa bell">&#xf0f3;</i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tree">
+                <ul>   
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Documents</a></li>
+                </ul>
+            </div>
+            <div class="main">Main/Dashboard
+                <div class="main1">
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot1">
+                <img class=ava src="https://cdn-icons-png.flaticon.com/512/146/146035.png">
+                <div class="text">
+                    <span style="font-size: 10px">Tom Cook</span>
+                    <span style="font-size: 7px">View profile</span>    
+                </div>   
+            </div>
+            <div class="foot2">
+            </div>
+        </div>  
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.1.display_layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #page {
+            display: grid;
+            width: 100%;
+            height: 500px;
+            font-family: sans-serif;
+            grid-template-areas:
+                "nav search"
+                "nav  main"
+                "foot  main";
+            grid-template-rows: 50px 1fr 50px;
+            grid-template-columns: 200px 800px;
+            }
+        
+        #page > header {
+        grid-area: search;
+        background-color: rgb(239, 231, 231);
+        font-size: 15px;
+        padding: 5px;
+        color: rgb(38, 14, 123);
+        }
+
+        #page > nav {
+        grid-area: nav;
+        background-color: #474787;
+        }
+
+        #page > main {
+        grid-area: main;
+        background-color: rgb(228, 224, 224);
+        font-size: 40px;
+        padding: 20px;
+        color: rgb(38, 14, 123);
+        background: linear-gradient(to bottom, #ffffff -29%, #666699 103%);
+        }
+
+        #page > footer {
+        grid-area: foot;
+        background-color: #292957;    
+        color: aliceblue;
+        text-align: center;
+        padding: 5px;
+        }
+        #page > nav ul{
+            display: grid;
+            grid-gap: 10px;
+            list-style: none;
+            color: rgb(255, 255, 255);        
+        }   
+       .tomau{
+            height: 20px; 
+            padding: 6px;
+            margin-left: 20px;
+        }
+        #page > nav ul li a:hover,
+        #page > nav ul li a:active,
+        #page > nav ul li a:focus {
+            color: white;
+            background-color: #292957;
+            transition: all ease 0.4s;
+            padding: 10px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        } 
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        .ava{
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+        input[type=text] {
+            text-align: left;
+            padding: 8px;
+            width: 90%;
+        }
+        button{
+            width: 40px;
+            height: 35px;
+            color: black;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+</style>
+</head>
+<body>
+    <section id="page">
+        <header>
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search..">
+
+        </header>
+        <nav>
+            
+            <ul >
+                <li><img src="https://i.pinimg.com/originals/85/db/23/85db232a0e2f4d7ec93db9bcedeb97d8.png"></li>
+            </ul>   
+            <ul class="tomau" >   
+                <li><a href="#">Dashboard</a></li>
+            </ul>
+            <ul class="tomau">
+                <li><a href="#">Team</a></li>
+            </ul>
+            <ul class="tomau">
+                <li><a href="#">Projects</a></li>
+            </ul>
+            <ul class="tomau">
+                <li><a href="#">Calendar</a></li>
+            </ul>
+            <ul class="tomau">
+                <li><a href="#">Documents</a></li>
+            </ul>
+        </nav>
+        <main>Dashboard</main>
+        <footer>
+            <img class=ava src="https://cdn-icons-png.flaticon.com/512/146/146035.png">
+            <span style="font-size: 15px">Tom Cook</span><br/>
+            <span style="font-size: 10px">View profile</span>       
+        </footer>
+    </section>
+</body>
+</html>

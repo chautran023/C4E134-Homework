@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn món ăn</title>
+</head>
+<body>
+    <div>
+    <p id ="menu">Mời chọn các món ăn bên dưới</p>
+    <ol start="0">
+        <li id=0>Đã chọn xong đồ ăn</li>
+        <li id=1>Bún chả Hà Nội</li>
+        <li id=2>Bún bò Huế</li>
+        <li id=3>Bánh tráng Tây Sơn</li>
+        <li id=4>Nem chua Bình Định</li>
+        <li id=5>Bánh mì chả lụa</li>
+    </ol>
+    </div>
+    <div>
+        <label>Nhập số tương ứng món ăn bạn chọn: </label>
+        <input type="number" id="choice"><br/><br/>
+        <button onclick="myFunction1()">Submit</button>
+    </div>
+    <p id="demo"></p>
+    <div id="myDIV" style="display:none">
+        <p>Mời chọn các món ăn bên dưới</p>
+        <ol start="0">
+            <li>Đã chọn xong đồ ăn</li>
+            <li>Bún chả Hà Nội</li>
+            <li>Bún bò Huế</li>
+            <li>Bánh tráng Tây Sơn</li>
+            <li>Nem chua Bình Định</li>
+            <li>Bánh mì chả lụa</li>
+        </ol>
+        </div>
+<script>
+    function myFunction1(){
+        var choice = document.getElementById("choice").value;
+        var monAn = document.getElementById(choice).textContent;
+        var x = document.getElementById("myDIV");
+        if (choice == 0) {
+            document.getElementById("demo").innerHTML = "Cám ơn bạn đã sử dụng dịch vụ của quán chúng tôi, vui lòng chờ trong ít phút, đồ ăn của quý khách sẽ được mang ra ngay.";
+            x.style.display = "none";
+
+        }
+        else {
+            document.getElementById("demo").innerHTML = "Bạn đã chọn: "+ monAn;
+            x.style.display = "block";
+        }
+
+        
+        
+    }
+
+</script>
+</body>
+</html>

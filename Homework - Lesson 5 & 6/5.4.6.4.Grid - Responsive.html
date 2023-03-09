@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.4 Grid Responsive</title>
+</head>
+<style>
+    .gallery{
+        display: grid;
+        width: 750px;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 370px 370px;
+        grid-template-rows: auto auto auto;
+    }
+    .gallery__img{
+        border-radius: 10px;
+    }
+    figure{
+        width: max-content;
+        position: relative;
+    }
+    .cap1{
+        position: absolute;
+        bottom: 30px;
+        left: 16px;
+        font-family: 'Lucida Sans';
+        font-size: 10px;
+        font-weight: bolder;
+        color: aliceblue;
+    }
+    .cap2{
+        position: absolute;
+        bottom: 12px;
+        left: 16px;
+        font-family: 'Lucida Sans';
+        font-size: 8px;
+        font-weight: lighter;
+        color: aliceblue;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    p, figure{
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+    .gallery__item--1{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .gallery__item--2{
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .gallery__item--2{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .p1{
+        font-family: 'Lucida Sans';
+        font-weight: bolder;
+    }
+    .p2{
+        font-family: geneva;
+        text-align: right;
+        margin-right: 35px;
+        font-weight: bolder;
+        color: rgb(89, 4, 169);
+    }
+    @media (max-width: 390px){
+        .gallery{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 50px 200px 200px 200px 50px;
+        }
+        .p1{
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        
+        .gallery__item--1{
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .gallery__item--2{
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .gallery__item--2{
+            grid-row-start: 4;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .p2{
+            grid-row-start: 5;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            text-align: left;
+        }
+        figure{
+            width: 88%;
+        }
+        
+}
+
+</style>
+<body>
+    <div class="gallery">
+        <p class="p1">Shop by Category</p>
+        <p class="p2">Browse all categories <span class="arr">&#8594;</span></p>
+        <figure class="gallery__item gallery__item--1">
+            <img src="https://fakeimg.pl/300x300/" class="gallery__img" alt="Image 1">
+            <figcaption class="cap1">Product category name</figcaption>
+            <figcaption class="cap2">Shop now</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="https://fakeimg.pl/300x150/" class="gallery__img" alt="Image 2">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">Shop now</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+            <img src="https://fakeimg.pl/300x150/" class="gallery__img" alt="Image 3">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">Shop now</figcaption>
+        </figure>
+
+    </div>    
+</body>
+</html>

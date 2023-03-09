@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.4.display_layout</title>
+    <style>
+    .container { 
+        display: grid;
+        grid-template-columns: 600px 600px ;
+        grid-template-rows: 400px 400px;
+        justify-content: center;
+        grid-gap: 20px;
+        border-radius: 10px;
+    }
+    
+  .item {
+  background: rgb(49, 151, 198);
+  border-radius: 8px;
+  border-radius: 10px;
+}
+   
+  .item1{
+    
+    grid-row-start: 1; grid-row-end: 3;
+    background-image: url(https://glassbottles.co.uk/wp-content/uploads/2013/06/1000ml-Clear-Mountain-Bottle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+
+  }
+  .item2{
+    grid-column-start: 2; grid-column-end: 2;
+    grid-row-start: 1; grid-row-end: 1;
+    background-image: url(https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2022/7/27/ae57738bly4h4gkg5axnnj20xv0jqnik-1658927602101-1658927602822355624917.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+
+  }
+  .item3{
+    grid-column-start: 2; grid-column-end: 2;
+    grid-row-start: 2; grid-row-end: 2;
+    background-image: url(https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2022/7/27/ae57738bly4h4gkg5axnnj20xv0jqnik-1658927602101-1658927602822355624917.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+  }
+  .back{
+    background-color: rgb(230, 226, 226);
+    border-radius: 20px;
+    padding: 20px;
+    height: 900px;
+    width: 1260px;
+  }
+  .p1{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+
+  }
+  .p2{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+    float: right;
+    padding-right: 30px;
+ 
+    
+}
+
+
+/* Bottom left text */
+.details{
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+}
+    .image-author{
+    font-weight: lighter;
+    font-family: arial;
+    font-size: 15px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="back">
+        
+        <span class="p1">Shop by Category</span>
+        <span class="p2">Browse all categories <span class="arr">&#8594;</span></span> 
+        
+        <p></p>
+    <div class="container">
+        <div class="item item1">
+            <div class="details">
+                <h3>New Arrivals</h3>
+                <p class="image-author">Shop now</p>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="details">
+                <h3>Accessories</h3>
+                <p class="image-author">Shop now</p>
+            </div>
+        </div>
+        <div class="item item3">
+            <div class="details">
+                <h3>Workspace</h3>
+                <p class="image-author">Shop now</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

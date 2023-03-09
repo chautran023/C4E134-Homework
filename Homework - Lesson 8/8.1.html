@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8.1</title>
+</head>
+<body>
+    <div>
+        <label>Khai số n: </label>
+        <input type="number" id="num"><br/><br/>
+        <button onclick="myFunctionA()">Kết quả (a): chẵn/lẻ</button><br/><br/>
+        <button onclick="myFunctionB()">Kết quả (b): âm/dương</button><br/><br/>
+        <button onclick="myFunctionC()">Kết quả (c): số nguyên tố</button><br/><br/>
+        <button onclick="myFunctionD()">Kết quả (d): các số nguyên tố nhỏ hơn n</button><br/><br/>
+        <button onclick="myFunctionE()">Kết quả (e): các số chẵn từ 0 đến n</button><br/><br/>
+        <button onclick="myFunctionF()">Kết quả (f): các số lẻ từ 1 đến n</button><br/><br/>
+        <button onclick="myFunctionG()">Kết quả (g): các số từ n đến 0</button>
+
+    </div>
+    <p id="demo"></p>
+    <script>
+        function myFunctionA()
+        {
+            var number = document.getElementById("num").value;
+            if (number % 2 === 0){
+                document.getElementById("demo").innerHTML = "Số chẵn";
+            }
+            else{
+                document.getElementById("demo").innerHTML = "Số lẻ";
+            }
+        }
+        
+        function myFunctionB()
+        {
+            var number = document.getElementById("num").value;
+            if (number < 0){
+                document.getElementById("demo").innerHTML = "Số âm";
+            }
+            else{
+                document.getElementById("demo").innerHTML = "Số dương";
+            }
+        }
+
+        function myFunctionC()
+        {
+            var number = document.getElementById("num").value;
+            count = 0;
+            for (let i = 1; i <= number; i++){
+                if (number % i == 0){
+                    count += 1;
+                    }
+                else {
+                    count += 0;
+                }
+            }
+            if (count > 2 || number == 0 || number == 1) {
+                document.getElementById("demo").innerHTML = "Không phải số nguyên tố";
+                }
+            else {
+                document.getElementById("demo").innerHTML = "Số nguyên tố";
+            }            
+        }
+
+        function myFunctionD()
+        {       
+            const daySo = [];
+            var number = document.getElementById("num").value;    
+            for (let k = 2; k < number; k++){
+                count = 0;
+                for (let i = 1; i <= k; i++){
+                    if (k % i == 0){
+                        count += 1;
+                        }
+                    }
+                    if (count > 2) {
+                        daySo.push();
+                        count = 0;
+                        }  
+                    else{
+                        daySo.push(k);
+                    } 
+                }
+            document.getElementById("demo").innerHTML = daySo;
+
+        }
+        function myFunctionE()
+        {
+            const daySo = [];
+            var number = document.getElementById("num").value; 
+            for (let k = 0; k <= number; k++){               
+                if (k % 2 === 0){
+                    daySo.push(k);
+                    }
+            }
+            document.getElementById("demo").innerHTML = daySo;
+        }
+        function myFunctionF()
+        {
+            const daySo = [];
+            var number = document.getElementById("num").value; 
+            for (let k = 1; k <= number; k++){               
+                if (k % 2 !== 0){
+                    daySo.push(k);
+                    }
+            }
+            document.getElementById("demo").innerHTML = daySo;
+        }
+        function myFunctionG()
+        {
+            const daySo = [];
+            var number = document.getElementById("num").value; 
+            for (let k = number; k >= 0; k--){               
+                    daySo.push(k);
+            }
+            document.getElementById("demo").innerHTML = daySo;
+        }    
+        
+       
+    </script>
+    </body>
+</html>

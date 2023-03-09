@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.3 Grid Responsive</title>
+</head>
+<style>
+    .gallery{
+        display: grid;
+        width: 600px;
+        column-gap: 25px;
+        grid-template-columns: 100px 100px 100px 100px;
+    }
+    .gallery__img{
+        border-radius: 10px ;
+    }
+    figure{
+        width: max-content;
+    }
+    .cap1{
+        font-family: 'Lucida Sans';
+        font-size: 12px;
+        font-weight: lighter;
+    }
+    .cap2{
+        font-family: 'Lucida Sans';
+        font-size: 12px;
+        font-weight: bolder;
+    }
+    @media (max-width: 1180px) and  (min-width: 820px) {
+        .gallery{
+            grid-template-columns: 200px 200px;
+            width: 570px;
+            grid-template-rows: auto auto auto auto;
+            column-gap: 70px;
+        }
+        img{
+            width: 200%;          
+        }
+        .cap1, .cap2{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 851px) and  (min-width: 393px) {
+        .gallery{
+            grid-template-columns: auto;
+            width: 300px;
+        }
+        img{
+            width: 200%;
+        }
+        .cap1, .cap2{
+            font-size: 15px;
+        }
+    }
+
+</style>
+<body>
+    <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 1">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 2">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 3">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 4">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 5">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 6">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--7">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 7">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--8">
+            <img src="https://fakeimg.pl/110x150/" class="gallery__img" alt="Image 8">
+            <figcaption class="cap1">Product name</figcaption>
+            <figcaption class="cap2">$00</figcaption>
+        </figure>
+
+        </div>
+    </div>
+</body>
+</html>

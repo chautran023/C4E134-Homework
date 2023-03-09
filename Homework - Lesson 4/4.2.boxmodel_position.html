@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model & position</title>
+    <style>
+   .div1 {
+        background-color: white;
+        position: relative;
+        border: 3px solid gray;
+        height: 400px;
+        width: 100px;
+        padding: 10px;
+        font-family: arial;
+    }
+    .div2{
+        background-color: white;
+        position: absolute;
+        border: 3px solid gray;
+        height: 400px;
+        width: 100px;
+        padding: 10px;
+        font-family: arial;
+        margin-left: 150px;
+        margin-top: -30px;
+    }
+    .div3{
+        background-color: white;
+        position: absolute;
+        border: 3px solid gray;
+        height: 400px;
+        width: 100px;
+        padding: 10px;
+        font-family: arial;
+        margin-left: 150px;
+        margin-top: -30px;
+    }
+    .div4{
+        background-color: white;
+        position: absolute;
+        border: 3px solid gray;
+        height: 400px;
+        width: 100px;
+        padding: 10px;
+        font-family: arial;
+        margin-left: 150px;
+        margin-top: -30px;
+    }
+    div.relative1 {
+        position: relative;
+        background-color: white;
+        border: 3px solid gray;
+        margin-top: 10px;
+        width: 200px;
+        height: 150px;
+    }
+    div.absolute2 {
+        position: absolute;
+        background-color: white;
+        border: 3px solid gray;
+        margin-left: 150px;
+        margin-top: 80px;
+        width: 170px;
+        height: 200px;
+    }
+    div.absolute3 {
+        position: relative;
+        background-color: white;
+        border: 3px solid gray;
+        margin-top: 80px;
+        width: 400px;
+        height: 100px;
+    }
+    div.absolute4 {
+        position: absolute;
+        background-color: white;
+        border: 3px solid gray;
+        margin-left: 380px;
+        margin-top: -290px;
+        width: 110px;
+        height: 310px;
+    }
+    .egg{
+        width: 200px;
+        height: 250px;
+        background-color: rgb(6, 112, 124);
+        border-radius: 50%/60% 60% 40% 40%;        
+    }
+    #heart { 
+        position: relative; 
+    } 
+    #heart:before, #heart:after { 
+        position: absolute; 
+        content: ""; 
+        left: 80px; 
+        top: 0; 
+        width: 80px; 
+        height: 130px; 
+        background: rgb(0, 255, 76); 
+        border-radius: 50px 50px 0 0; 
+        transform: rotate(-45deg); 
+        transform-origin: 0 100%; 
+    } 
+    #heart:after { 
+        left: 0; 
+        transform: rotate(45deg); 
+        transform-origin :100% 100%; 
+    }
+    .hinh234{
+        margin-top: 450px;
+        margin-left: -175px;
+    }
+    </style>
+</head>
+<body>
+    <h1 style="font-family: arial">Hình 1</h1>
+    <div class="div1">div1
+        <div class="div2">div 2
+    
+    		<div class="div3">div3
+            	<div class="div4">div4
+         </div>
+     </div>
+    <div class="hinh234">
+    <h1>Hình 2</h1>
+    <div>
+        <div class="relative1">div 1
+            <div class="absolute2">div 2</div>
+        </div>
+        <div class="absolute3">div 3
+            <div class="absolute4">div 4</div>
+        </div>
+     
+    </div>
+    <h1>Hình 3</h1>
+    <div class="egg"></div>
+
+    <!--<h1>Hình 4</h1>
+    <div id="heart"></div>
+    
+    </div>-->
+</body>
+</html>

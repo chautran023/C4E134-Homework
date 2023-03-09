@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.2.display_layout</title>
+    <style>
+       #page {
+        display: grid;
+            width: 100%;
+            height: 500px;
+            font-family: sans-serif;
+            grid-template-areas:
+                "head head"
+                "nav  search"
+                "main main"
+                "foot  foot";
+            grid-template-rows: 50px 50px 1fr 30px;
+            grid-template-columns: 600px 400px;
+        }
+        #page > header {
+            grid-area: head;
+            background-color: #8ca0ff;
+        }
+        img{
+            width: 45px;
+            height: 45px;
+            padding-left: 10px;
+        }
+        #page > nav {
+            grid-area: nav;
+            background-color: #474787;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        } 
+        .tomau{
+            height: 20px; 
+            padding: 20px;
+            margin-left: 20px;
+        }
+        #page > div {
+            grid-area: search;
+            background-color: #474787;
+            padding: 15px;
+            color: rgb(38, 14, 123);
+        }
+        input[type=text] {
+            margin-top: 7px;
+            padding: 5px;
+            width: 97%;
+            background-color: rgb(219, 219, 244);
+            border: none;
+        }
+        #page > main {
+            grid-area: main;
+            background-color: #474787;
+        }
+        #page > footer {
+            grid-area: foot;
+            background-color: rgb(236, 234, 234);
+            text-align: left;
+            padding: 10px;
+            font-size: 10px;
+            color: rgb(106, 98, 98);
+        }
+        .container{
+            position: relative;
+            background: -webkit-linear-gradient(90deg, rgb(237, 234, 234) 80%,  #474787 20%);
+            height: 100%; 
+        }
+        .main1{
+            position: absolute;
+            border: 3px rgb(174, 170, 170);
+            border-radius: 2%;
+            background-color: white;
+            border-style: dashed;
+            top: 10%;
+            width: 55%; 
+            height: 80%;
+            left: 2%;
+        }
+        .main2{
+            position: absolute;
+            border: 3px rgb(174, 170, 170);
+            border-radius: 2%;
+            background-color: white;
+            border-style: dashed;
+            top: 10%;
+            width: 37%; 
+            height: 80%;
+            left: 61%;
+        }
+        @media (max-width: 393px){
+        #page {
+            grid-template-areas:
+                "head"
+                "search"
+                "main"
+                "main"
+                "foot";
+            grid-template-rows: 50px 50px 1fr 30px;
+            grid-template-columns: 65%;
+        }
+        #page > nav {
+            display: none;
+        }
+          
+        .container{
+            position: relative;
+            height: 100%; 
+        }
+        .main1{
+            position: absolute;
+            margin: 5%;
+            top: 2%;
+            width: 80%; 
+            height: 40%;
+        }
+        .main2{
+            position: absolute;
+            width: 80%; 
+            height: 50%;
+            top: 50%;
+            left: 7%;
+        }
+        #page > footer {
+            text-align: center;
+        }
+        }
+
+    </style>
+<body>
+    <section id="page">
+        <header>
+            <img src="https://i.pinimg.com/originals/85/db/23/85db232a0e2f4d7ec93db9bcedeb97d8.png">
+            <img style="float:right; margin: 10px; height: 30px; width: 30px;" class=ava src="https://cdn-icons-png.flaticon.com/512/146/146035.png">
+        </header>
+        <nav>
+            <table>
+                <tr>
+                    <td class="tomau"><a href="#">Home</a></td>
+                    <td class="tomau"><a href="#">Profile</a></td>
+                    <td class="tomau"><a href="#">Resources</a></td>
+                    <td class="tomau"><a href="#">Company Directory</a></td>
+                    <td class="tomau"><a href="#">Openings</a></td>
+                </tr>
+            </table>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="main1"></div>
+                <div class="main2"></div>
+            </div>
+        </main>
+        <div>
+            <input type="text" placeholder="Search..">
+        </div>
+        <footer>
+            © 2021 Your Company, Inc. All rights reserved.
+        </footer>
+      </section>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Đăng Ký Người Dùng</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+        div{
+            border-radius: 10px;
+            margin-left: 30%;
+            width: 30%;
+            background-color: antiquewhite;
+            padding: 5%;
+        }
+        textarea, select, input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+            padding: 12px 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }  
+        select{
+            width: 105%;
+        }
+        input[type=submit] {
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 12px;
+            font-family: 'Lucida Sans';
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=checkbox], input[type=radio]{
+            transform: scale(1.1);
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <div>
+    <form>
+        <label>Name:</label><br/>
+        <input type="text"/><br/>
+
+        <label>Email:</label><br/>
+        <input type="email"/><br/>
+
+        <label>Password:</label><br/>
+        <input type="password"/><br/>
+
+        <label>Age:</label><br/>
+        <input type="radio" name="18" />Under 18<br/>
+        <input type="radio" name="18"/>Over 18<br/>
+
+        <label>Bio:</label><br>
+        <textarea rows="4" cols="50" placeholder="Tell us about yourself"></textarea><br/>
+    
+        <label>Job Role:</label><br/>
+            <select>
+                <optgroup label="Web">
+                    <option>Font-End Developer</option>
+                    <option>PHP Developer</option>
+                    <option>Python Developer</option>
+                    <option>Rails Developer</option>
+                    <option>Web Developer</option>
+                    <option>Wordpress Developer</option>
+                </optgroup>
+                <optgroup label="Mobile">
+                    <option>Android Developer</option>
+                    <option>iOS Developer</option>
+                    <option>Mobile Designer</option>
+                </optgroup>
+                <optgroup label="Business">
+                    <option>Business Owner</option>
+                    <option>Freelancer</option>
+                </optgroup>
+            </select><br/>
+        <label>Interests:</label><br/>
+        <input type="checkbox"/>Development<br/>
+        <input type="checkbox"/>Design<br/>
+        <input type="checkbox"/>Business<br/>
+        
+        <p><input type="submit"></p><br/>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model & position</title>
+    <style>
+        header{
+            font-weight: bold;
+            font-size: 30px;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        span{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .container{
+            background-color: rgb(236, 236, 167);
+            border: 5px solid rgb(179, 12, 12);
+            position: relative;
+            width: 600px;
+            height: 800px;
+        }
+        img { 
+            position: absolute;
+            margin-left: 30px;
+            margin-top: 25px;
+            width: 50%;
+            height: auto;
+            background: -webkit-linear-gradient(128deg, orange 50%, rgb(255, 106, 0) 50%);
+            padding: 12px;
+        }
+        .text{
+            position: absolute;
+            margin-right: 50px;
+            margin-top: 300px;
+            margin-left: 30px;
+            height: 300px;
+            width: 400px ;
+            padding: 15px;
+            background-color: yellow;
+            border: 8px solid rgb(243, 78, 18);
+            border-style: dashed;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="container"><header>Fox</header>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Looking_Foxy.jpg/220px-Looking_Foxy.jpg">
+    <div class="text">
+        <span>Fox is a common name for many species of carnivorous mammals belonging to the Canidae family.</span> Foxes are small to medium-sized canids (slightly smaller than the median-sized domestic dog), characterized by possessing a long narrow snout, and a bushy tail (or brush).<br/>
+        <br/>
+        <span>Members of about 37 species are referred to as foxes, of which only 12 species actually belong to the Vulpes genus of 'true foxes'.</span> By far the most common and widespread species of fox is the red fox (Vulpes vulpes), although various species are found on almost every continent. The presence of fox-like carnivores all over the globe has led to their appearance in both popular culture and folklore in many cultures around the world (see also Foxes in culture). The gray fox is one of only two canine species known to climb trees; the other is the raccoon dog.
+    </div>
+</div>
+</body>
+</html>

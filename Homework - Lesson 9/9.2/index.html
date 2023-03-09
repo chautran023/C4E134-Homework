@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework - Lesson 9.2 - TODO list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container1">
+        <label>Title</label><br><br>
+        <textarea  type="text" id="myInput" placeholder="Add title here..." cols="50" rows="5"></textarea><br><br>
+        <label>Description</label><br><br>
+        <textarea type="text" id="desc" placeholder="Add details of task here..." cols="50" rows="15"></textarea><br><br>
+        
+        <button onclick="newElement()" class="addBtn">Add</button>
+    </div>
+    <div id="container2">
+        <ul id="myUL"></ul>
+        <p>
+            How to Use: <br/>
+            :) Click "Edit" button to edit tasks. When done editing, click "Done" to update.<br/>
+            :) Click the task title to mark "Complete". Click again to unmark "Complete".<br/>
+            :) Click "Sort" to arrange the tasks alphabetically.<br/>
+            :) To clear all completed tasks, click "Delete".<br/>
+            :) To see your completed tasks, click "Show COMPLETED".<br/>
+            :) To see your unfinished tasks, click "Show UNFINISHED".<br/>
+            :) To see all your tasks, click "Show ALL".<br/>
+
+        </p>
+        <button type="submit" id="edit-button">Edit</button>
+        <button type="submit" id="end-editing">Done</button>
+        <button onclick="sortList('myUL')">Sort</button>
+        <button id="delete-button" onclick="del_completed('myUL')">Delete</button><br/><br/>
+        <button id="show-com-button">Show COMPLETED</button>
+        <button id="show-unfin-button">Show UNFINISHED</button>
+        <button id="show-button">Show ALL</button><br/><br/>
+        <div id="show"></div>
+    </div>
+
+    </div>
+   
+    <script src="index.js"></script>
+</body>
+</html>

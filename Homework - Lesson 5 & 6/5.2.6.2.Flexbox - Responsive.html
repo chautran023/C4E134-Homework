@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.2.Flexbox Responsive</title>
+</head>
+<style>
+.container{
+    display: flex; 
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    font-family: sans-serif;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: blue;
+}
+.combohead{
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+    border: 2px solid gray;
+    border-radius: 10px;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid gray;
+    background-color: #8ca0ff;
+    border-radius: 10px 10px 0px 0px;
+}
+.star{
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+.ava{
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+}
+.ngang{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    border: 2px solid gray;
+    background-color: palegreen;
+}
+.tree{
+    width: 70%;
+    border: 2px solid gray;
+    background-color: #474787;
+}
+a{
+    color: white;
+    text-decoration: none;
+} 
+table{
+    padding-left: 30px;
+}
+td{
+    padding-right: 30px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+.search{
+    width: 30%;
+    border: 2px solid gray;
+    background-color: #474787;
+}
+input[type=text] {
+    height: 90%;
+    width: 98%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #e1e1f7;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    position: relative;
+    border: 2px solid gray;
+    background: -webkit-linear-gradient(90deg, rgb(237, 234, 234) 70%,  #474787 30%);
+}
+.main1{
+    position: absolute;    
+    background-color: gainsboro;
+        left: 30px; top: 30px;
+        width: 60%;
+        height: 80%;
+        border-style: dashed;
+        border-width: 3px;
+        border-radius: 10px;
+        color: rgb(172, 167, 167);
+}
+.main2{
+    position: absolute;
+    background-color: gainsboro;
+        right: 25px; top: 30px;
+        width: 25%;
+        height: 80%;
+        border-style: dashed;
+        border-width: 3px;
+        border-radius: 10px;
+        color: rgb(172, 167, 167);
+}
+.foot{
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(236, 234, 234);
+    padding-left: 30px;
+    padding-top: 10px;
+    color: rgb(106, 98, 98);
+    text-align: center;
+    font-size: 13px;
+}
+@media (max-width: 390px){
+        .container{
+            width: 100%;
+            height: 100%;
+        }
+        .ngang{
+            width: 100%;
+        }
+        .combohead{
+            flex-direction: row;
+            background-color: #474787;
+        }
+        .header{
+            background-color: #474787;
+        }
+        .ava{
+            display: none; 
+        }
+        .search{
+            width: 100%;
+        }
+        
+        .tree {
+            display: none;
+        }
+        
+        .main{
+            flex-direction: column;
+            height: 700px;
+        }
+        .main1{
+            height: 40%;
+            width: 80%;
+        }
+        .main2{
+            top: 48%;
+            left: 30px;
+            height: 48%;
+            width: 80%;
+        }
+        
+    }  
+</style>
+<body>
+    <div class="container">
+        <div class="combohead">
+        <div class="header">
+            <img class="star" src="https://i.pinimg.com/originals/85/db/23/85db232a0e2f4d7ec93db9bcedeb97d8.png">
+            <img class=ava src="https://cdn-icons-png.flaticon.com/512/146/146035.png">
+        </div>
+        <div class="ngang">
+            <div class="tree">
+                <table>
+                    <td><a href="#">Home</a></td>
+                    <td><a href="#">Profile</a></td>
+                    <td><a href="#">Resources</a></td>
+                    <td><a href="#">Company Directory</a></td>
+                    <td><a href="#">Openings</a></td>
+                </table>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search..">
+            </div>
+        </div>
+        </div>
+        <div class="main">
+            <div class="main1"></div>
+            <div class="main2"></div>
+        </div>
+    
+        <div class="foot">
+            © 2021 Your Company, Inc. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
